@@ -7,8 +7,8 @@ class Article
     public function __get($key)
     {
         $method = 'get' . ucfirst($key);
-        $this->key = $this->$method();
-        return $this->$key;
+        $key = $method(); // stocker dans le variable d'instance, pour qu'il ne soit pas lourd
+        return $key;    // return to the video 13 after a while
     }
     public function getURL()
     {
